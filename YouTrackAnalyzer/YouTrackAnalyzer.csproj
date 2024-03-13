@@ -6,10 +6,10 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Ben.Demystifier" Version="0.1.1" />
-    <PackageReference Include="CommandLineParser" Version="2.2.1" />
+    <PackageReference Include="CommandLineParser" Version="2.9.1" />
     <PackageReference Include="Humanizer" Version="2.2.0" />
     <PackageReference Include="JetBrains.Annotations" Version="11.1.0" />
     <PackageReference Include="TeamCity.ServiceMessages" Version="3.0.10" />
-    <PackageReference Include="YouTrackSharp" Version="2021.3.1" />
+    <PackageReference Include="YouTrackSharp" Version="2022.3.1" />
   </ItemGroup>
 </Project>

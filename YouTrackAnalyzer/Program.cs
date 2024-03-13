@@ -48,11 +48,13 @@ namespace YouTrackAnalyzer
                     taggedIssues.AddRange( await issuesService.GetIssues($"tag: {ourConfig.TagForHotIssues}", take:100));
                 }
 
+                string filter = $"{SearchFiler} {ourConfig.SearchCondition}";
+                
                 var list = new List<Issue>();
                 for (int i = 0; i < 20; i++)
                 {
                     var dexpIssues = await issuesService.GetIssuesInProject(
-                        "DEXP", $"{SearchFiler} {ourConfig.SearchCondition}", skip: i * 100, take: 100,
+                        "DEXP", filter, skip: i * 100, take: 100,
                         updatedAfter: DateTime.Now - TimeThreshold);
                     list.AddRange(dexpIssues);
                 }
